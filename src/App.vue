@@ -1,7 +1,7 @@
 <template>
     <v-app id="app">
         <v-toolbar
-                class="blue"
+                class="teal"
                 dark
                 app
                 clipped-left

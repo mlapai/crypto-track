@@ -10,7 +10,11 @@
   >
       <template slot="items" slot-scope="props">
           <td class="text-xs-left">
-              <router-link class="no-underline" :to="{ name: 'currency-details', params: { currencyId: 123 }}">{{ props.item.name }}
+              <router-link
+                      class="no-underline"
+                      :to="{ name: 'currency-details', params: { currencyId: props.item.id, currencyObj: props.item }}"
+              >
+                  {{ props.item.name }}
               </router-link>
           </td>
           <td class="text-xs-left">{{ props.item.symbol }}</td>
