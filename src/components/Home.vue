@@ -104,13 +104,18 @@ export default {
     },
     // Change state and localStorage value of given currency and calcualte value of user coin again
     setCurrencyStorageValue (currName, value, currPrice) {
+      let regexNumberTest = /^-?\d*\.?\d*$/
+      if (!regexNumberTest.test(value)) {
+        this.$toastr.error('Coin value should be a number.')
+        return
+      }
       this.$store.commit('changeCryptoValue', { currName, value })
       this.$refs['coinValue' + currName].innerHTML = '$ ' + (value * currPrice).toFixed(2)
     },
     // Calculate $ value of user coin's
     calculateUserValue (currName, currencyPrice) {
       let storageValue = this.getCurrencyStorageValue(currName)
-      return (storageValue.value * currencyPrice.toFixed(2))
+      return (storageValue.value * currencyPrice).toFixed(2)
     },
     // Resolve api request
     resolveDataFromApi () {
