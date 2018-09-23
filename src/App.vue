@@ -1,8 +1,22 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <v-app id="app">
+        <v-toolbar
+                class="blue"
+                dark
+                app
+                clipped-left
+                fixed
+        >
+            <v-toolbar-title>
+                CryptoTrack
+            </v-toolbar-title>
+        </v-toolbar>
+        <v-content>
+            <v-container fluid>
+                <router-view></router-view>
+            </v-container>
+        </v-content>
+    </v-app>
 </template>
 
 <script>
