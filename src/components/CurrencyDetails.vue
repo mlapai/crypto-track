@@ -4,6 +4,10 @@
             <v-card>
                 <v-toolbar color="teal" dark>
                     <v-toolbar-title>{{ currency.name }}</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <router-link class="no-underline" :to="{ name: 'Home' }">
+                        <v-btn>Back to Home</v-btn>
+                    </router-link>
                 </v-toolbar>
                 <v-list two-line>
                     <v-list-tile>
