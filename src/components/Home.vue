@@ -9,7 +9,10 @@
     class="elevation-1"
   >
       <template slot="items" slot-scope="props">
-          <td class="text-xs-left">{{ props.item.name }}</td>
+          <td class="text-xs-left">
+              <router-link :to="{ name: 'currency-details', params: { currencyId: 123 }}">{{ props.item.name }}
+              </router-link>
+          </td>
           <td class="text-xs-left">{{ props.item.symbol }}</td>
           <td class="text-xs-left">{{ props.item.quotes.USD.price.toFixed(2) }}</td>
           <td class="text-xs-left"
