@@ -8,7 +8,7 @@
                 fixed
         >
             <v-toolbar-title>
-                <router-link class="home-redirect" :to="{ name: 'Home' }">
+                <router-link class="home-redirect no-underline" :to="{ name: 'Home' }">
                     CryptoTrack
                 </router-link>
             </v-toolbar-title>
@@ -38,9 +38,11 @@ export default {
       color: #2c3e50;
       margin-top: 60px;
     }
+    .no-underline {
+        text-decoration: none;
+    }
     .home-redirect {
         color: #FFFFFF;
-        text-decoration: none;
     }
     .home-redirect:hover {
         color: #000000;
