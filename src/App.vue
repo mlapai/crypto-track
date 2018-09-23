@@ -8,7 +8,9 @@
                 fixed
         >
             <v-toolbar-title>
-                CryptoTrack
+                <router-link class="home-redirect" :to="{ name: 'Home' }">
+                    CryptoTrack
+                </router-link>
             </v-toolbar-title>
         </v-toolbar>
         <v-content>
@@ -28,12 +30,19 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+    .home-redirect {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .home-redirect:hover {
+        color: #000000;
+    }
 </style>
